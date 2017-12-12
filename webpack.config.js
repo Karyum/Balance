@@ -1,6 +1,5 @@
 const path = require('path');
 const webpack = require('webpack');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -44,9 +43,5 @@ const webpackConfig = {
     new webpack.optimize.UglifyJsPlugin({})
   ]
 };
-
-if (process.env.ANALYZE) {
-  webpackConfig.plugins.push(new BundleAnalyzerPlugin());
-}
 
 module.exports = webpackConfig;

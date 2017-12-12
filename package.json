@@ -8,7 +8,11 @@
     "dev": "nodemon --config webpack.config.js",
     "start": "webpack -p --config webpack.config.js && node src/server.js"
   },
-  "keywords": ["religion", "balance", "mario"],
+  "keywords": [
+    "religion",
+    "balance",
+    "mario"
+  ],
   "author": "karyum",
   "license": "ISC",
   "dependencies": {
