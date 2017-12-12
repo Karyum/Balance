@@ -1,0 +1,15 @@
+{
+  "short_name": "Balance",
+  "name": "The Religion of Balance",
+  "icons": [
+    {
+      "src": "/scales-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "theme_color": "#db7093",
+  "background_color": "#222222",
+  "display": "standalone"
+}
