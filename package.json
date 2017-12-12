@@ -1,0 +1,40 @@
+{
+  "name": "religion",
+  "version": "1.0.0",
+  "description": "a website about my religion",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p --config webpack.config.js",
+    "dev": "webpack-dev-server --config webpack.config.js",
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [
+    "religion",
+    "balance",
+    "mario"
+  ],
+  "author": "karyum",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
+    "file-loader": "^1.1.5",
+    "html-webpack-plugin": "^2.30.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^2.2.4",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.5",
+    "worker-loader": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.5",
+    "sw-precache": "^5.2.0",
+    "webpack-bundle-analyzer": "^2.9.1"
+  }
+}
