@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -p --config webpack.config.js",
     "dev": "nodemon --config webpack.config.js",
-    "start": "node src/server.js && webpack -p --config webpack.config.js"
+    "start": "webpack -p --config webpack.config.js && node src/server.js"
   },
   "keywords": ["religion", "balance", "mario"],
   "author": "karyum",
