@@ -5,14 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack -p --config webpack.config.js",
-    "dev": "webpack-dev-server --config webpack.config.js",
-    "start": "nodemon src/server.js"
+    "dev": "nodemon --config webpack.config.js",
+    "start": "node src/server.js && webpack -p --config webpack.config.js"
   },
-  "keywords": [
-    "religion",
-    "balance",
-    "mario"
-  ],
+  "keywords": ["religion", "balance", "mario"],
   "author": "karyum",
   "license": "ISC",
   "dependencies": {
@@ -30,11 +26,11 @@
     "sw-precache-webpack-plugin": "^0.11.4",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.5",
+    "sw-precache": "^5.2.0",
     "worker-loader": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^1.12.5",
-    "sw-precache": "^5.2.0",
     "webpack-bundle-analyzer": "^2.9.1"
   }
 }
