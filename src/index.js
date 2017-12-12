@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import 'file-loader?name=./manifest.json!./manifest.json';
-import scale from './icons/scales-512.png';
+import scale from './icons/scale.png';
 import holy from './holy.mp3';
 
 const Wrapper = styled.div`
@@ -27,13 +27,14 @@ const Image = styled.img`
 
   animation: 3s ease-out 0s 1 slideInFromLeft;
 
+  color: white;
   height: 18em;
   width: 18em;
 `;
 
-const SubTitle = styled.h1`
-  font-weight: 800;
-  font-size: 4em;
+const Title = styled.h1`
+  color: white;
+  font-size: 1.5rem;
 `;
 
 class App extends Component {
@@ -44,8 +45,8 @@ class App extends Component {
     }
     return (
       <Wrapper>
-        <h1>Welcome to my Religion</h1>
-        <SubTitle>BALANCE</SubTitle>
+        <Title>May the balance be with you</Title>
+        <p />
         <p style={{ marginBottom: '1em' }}>{soundNotWorking || ''}</p>
         <Image src={scale} />
       </Wrapper>
@@ -74,6 +75,9 @@ class App extends Component {
 * 9. You are your own god, no matter who you are and what you are.
 * 10. Don't fill your mind with false thoughts of others.
 *
+*/
+/*
+  Moto: May the balance be with you
 */
 
 render(<App />, document.getElementById('root'));

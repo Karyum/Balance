@@ -41,7 +41,8 @@ const webpackConfig = {
       serviceWorker: '/sw.js'
     }),
     new webpack.optimize.UglifyJsPlugin({})
-  ]
+  ],
+  watch: true
 };
 
 module.exports = webpackConfig;
