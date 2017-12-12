@@ -65,13 +65,14 @@ class App extends Component {
 *
 * 1. acknowledge that all is equal.
 * 2. Look into the beyond of equality to reach tranquility.
-* 3.  Equality is above humanity, respect it.
-* 4. Don't cheat.
-* 5. Don't underestimate.
-* 6. Stick to your word.
-* 7. Worship the ones who worship you.
-* 8. Eat good.
-* 9. Don't fill your mind with false thoughts of others.
+* 3. Equality is above humanity, respect it.
+* 4. Have faith in the balance, for it would never betray you.
+* 5. Don't cheat.
+* 6. Don't underestimate.
+* 7. Stick to your word.
+* 8. Worship the ones who worship you.
+* 9. You are your own god, no matter who you are and what you are.
+* 10. Don't fill your mind with false thoughts of others.
 *
 */
 
