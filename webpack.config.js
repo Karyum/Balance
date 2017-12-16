@@ -30,7 +30,7 @@ const webpackConfig = {
     new SWPrecacheWebpackPlugin({
       filename: 'sw.js',
       cacheId: 'projectName',
-      staticFileGlobs: ['dist/*.{js,css,json,html}'],
+      staticFileGlobs: ['dist/*.{js,css,json,html,png}'],
       minify: true,
       mergeStaticsConfig: true,
       stripPrefix: 'dist/',

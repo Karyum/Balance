@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import scale from './assets/scale.png';
 import holy from './assets/holy.mp3';
 import 'file-loader?name=./manifest.json!./manifest.json';
+import 'file-loader?name=./assets/scale192.png!./assets/scale192.png';
 
 const Wrapper = styled.div`
   display: flex;
