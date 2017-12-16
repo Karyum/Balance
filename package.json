@@ -4,7 +4,7 @@
   "description": "a website about my religion",
   "main": "index.js",
   "scripts": {
-    "build": "webpack -p --config webpack.config.js",
+    "build": "webpack -w --config webpack.config.js",
     "dev": "nodemon ./src/server.js",
     "start": "webpack -p --config webpack.config.js && node src/server.js"
   },

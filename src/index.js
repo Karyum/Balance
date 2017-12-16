@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import 'file-loader?name=./manifest.json!./manifest.json';
-import scale from './icons/scale.png';
-import holy from './holy.mp3';
+import scale from './assets/scale.png';
+import holy from './assets/holy.mp3';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,7 +21,7 @@ const Image = styled.img`
       transform: translateY(-100%);
     }
     100% {
-      transform: translateX(0);
+      transform: translateY(0);
     }
   }
 
@@ -33,6 +33,21 @@ const Image = styled.img`
 `;
 
 const Title = styled.h1`
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+`;
+
+const Commandments = styled.div`
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 50rem;
+  background-color: black;
+  z-index: 1;
+`;
+
+const Command = styled.h1`
   color: white;
   font-size: 1.5rem;
 `;
@@ -46,7 +61,10 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>May the balance be with you</Title>
-        <p />
+        <Command>The Ten Commandments</Command>
+        <Commandments>
+          <h1 style={{ color: 'white' }}>hi</h1>
+        </Commandments>
         <p style={{ marginBottom: '1em' }}>{soundNotWorking || ''}</p>
         <Image src={scale} />
       </Wrapper>
