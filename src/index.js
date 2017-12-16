@@ -2,9 +2,9 @@ import { render } from 'react-dom';
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import 'file-loader?name=./manifest.json!./manifest.json';
 import scale from './assets/scale.png';
 import holy from './assets/holy.mp3';
+import 'file-loader?name=./manifest.json!./manifest.json';
 
 const Wrapper = styled.div`
   display: flex;
