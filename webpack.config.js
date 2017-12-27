@@ -37,8 +37,7 @@ const webpackConfig = {
       navigateFallback: '/dist'
     }),
     new HtmlWebpackPlugin({
-      template: './index.html',
-      serviceWorker: '/sw.js'
+      template: './index.html'
     }),
     new webpack.optimize.UglifyJsPlugin({})
   ]

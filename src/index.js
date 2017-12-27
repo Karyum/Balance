@@ -3,8 +3,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import 'file-loader?name=./manifest.json!./manifest.json';
-import scale from './assets/scale.png';
-import 'file-loader?name=./assets/scale192.png!./assets/scale192.png';
 import holy from './assets/holy.mp3';
 
 const Wrapper = styled.div`
@@ -67,7 +65,7 @@ class App extends Component {
           <h1 style={{ color: 'white' }}>hi</h1>
         </Commandments>
         <p style={{ marginBottom: '1em' }}>{soundNotWorking || ''}</p>
-        <Image src={scale} />
+        <Image src="./assets/scale.png" />
       </Wrapper>
     );
   }
