@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import 'file-loader?name=./manifest.json!./manifest.json';
+import 'file-loader?name=./icons/scale512.png!./icons/scale512.png';
+import 'file-loader?name=./icons/scale192.png!./icons/scale192.png';
 import holy from './assets/holy.mp3';
 import scale from './assets/scale.png';
 
@@ -104,9 +106,10 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('sw.js')
     .then(registeration => {
-      console.log('Im on mate');
+      console.log('DDDUDUDUDUUDUUEE', registeration);
+      console.log(`Im on mate ${new Date()}`);
     })
     .catch(err => {
-      console.log('wtf just happend', err);
+      console.log('OYYYYYYY', err);
     });
 }

@@ -19,7 +19,7 @@ const webpackConfig = {
       },
       {
         test: /\.(png|mp3)$/,
-        loader: 'file-loader'
+        loader: 'file-loader?name=[name].[ext]'
       }
     ]
   },
@@ -31,7 +31,6 @@ const webpackConfig = {
       filename: 'sw.js',
       cacheId: 'projectName',
       staticFileGlobs: ['dist/*.{js,css,json,html,png}'],
-      minify: true,
       mergeStaticsConfig: true,
       stripPrefix: 'dist/',
       navigateFallback: '/dist'
