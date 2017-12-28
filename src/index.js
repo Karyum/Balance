@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import 'file-loader?name=./manifest.json!./manifest.json';
 import holy from './assets/holy.mp3';
+import scale from './assets/scale.png';
 
 const Wrapper = styled.div`
   display: flex;
@@ -65,17 +66,17 @@ class App extends Component {
           <h1 style={{ color: 'white' }}>hi</h1>
         </Commandments>
         <p style={{ marginBottom: '1em' }}>{soundNotWorking || ''}</p>
-        <Image src="./assets/scale.png" />
+        <Image src={scale} />
       </Wrapper>
     );
   }
 
   componentDidMount() {
-    const aud = new Audio(holy);
-    aud.play();
-    setTimeout(() => {
-      aud.pause();
-    }, 3000);
+    // const aud = new Audio(holy);
+    // aud.play();
+    // setTimeout(() => {
+    //   aud.pause();
+    // }, 3000);
   }
 }
 
