@@ -3,7 +3,7 @@
   "name": "The Religion of Balance",
   "icons": [
     {
-      "src": "./icons/scale.png",
+      "src": "./icons/scale512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
