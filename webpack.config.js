@@ -33,7 +33,7 @@ const webpackConfig = {
       staticFileGlobs: ['dist/*.{js,css,json,html,png}'],
       mergeStaticsConfig: true,
       stripPrefix: 'dist/',
-      navigateFallback: '/dist'
+      navigateFallback: '/dist/index.html'
     }),
     new HtmlWebpackPlugin({
       template: './index.html'
