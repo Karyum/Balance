@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -26,24 +25,17 @@ const webpackConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    open: true,
-  },
+
   plugins: [
     new SWPrecacheWebpackPlugin({
       filename: 'sw.js',
       cacheId: 'projectName',
-      staticFileGlobs: ['dist/*.{js,css,json,html,png}'],
-      mergeStaticsConfig: true,
-      stripPrefix: 'dist/',
-      navigateFallback: '/',
+      navigateFallback: '/index.html',
+      minify: true,
     }),
     new HtmlWebpackPlugin({
       template: './index.html',
     }),
-    new webpack.optimize.UglifyJsPlugin({}),
   ],
 };
 
