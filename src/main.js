@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import holy from './assets/holy.mp3';
 import scale from './assets/scale.png';
@@ -30,28 +30,43 @@ const Image = styled.img`
   width: 18em;
 `;
 
+const fadeIn = keyframes`
+from {
+    opacity: 0;
+  }
+to {
+    opacity: 1;
+  }
+`;
+
 const Title = styled.h1`
   color: white;
   margin-top: 1rem;
   font-size: 1.5rem;
+  font-family: sans-serif;
 `;
-
-// const Commandments = styled.div`
-//   opacity: 0;
-//   position: absolute;
-//   width: 100%;
-//   height: 50rem;
-//   background-color: black;
-//   z-index: 1;
-// `;
 
 const Command = styled.h1`
   color: white;
   cursor: pointer;
   font-size: 1.5rem;
+  margin-top: 5rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem 0.5rem;
+  font-family: sans-serif;
+  border: 1px solid white;
+  animation: ${props => (props.done ? fadeIn : 'none')} 1s linear forwards;
+  opacity: 0;
 `;
 
 class Main extends Component {
+  constructor() {
+    super();
+    this.state = {
+      done: false,
+    };
+  }
   render() {
     let soundNotWorking;
     if (window.matchMedia('(display-mode: standalone)').matches) {
@@ -60,11 +75,15 @@ class Main extends Component {
     return (
       <Wrapper>
         <Title>May the balance be with you</Title>
-        <Command onClick={e => this.props.changePage()}>
-          The Ten Commandments
-        </Command>
         <p style={{ marginBottom: '1em' }}>{soundNotWorking || ''}</p>
         <Image src={scale} />
+        <Command
+          className="Command"
+          done={this.state.done ? true : false}
+          onClick={e => this.props.changePage()}
+        >
+          The Ten Commandments
+        </Command>
       </Wrapper>
     );
   }
@@ -74,6 +93,7 @@ class Main extends Component {
     aud.play();
     setTimeout(() => {
       aud.pause();
+      this.setState({ done: true });
     }, 3000);
   }
 }

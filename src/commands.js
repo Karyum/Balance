@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Line = styled.span`
-  color: orangered;
+  color: white;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-family: sans-serif;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   flex-direction: column;
 `;
 
@@ -20,7 +22,7 @@ class Commands extends Component {
 
     this.state = {
       commandments: [
-        'acknowledge that all is equal.',
+        'Acknowledge that all is equal.',
         'Look into the beyond of equality to reach tranquility.',
         'Equality is above humanity, respect it.',
         'Have faith in the balance, for it would never betray you.',
