@@ -26,7 +26,7 @@ class Commands extends Component {
         'Look into the beyond of equality to reach tranquility.',
         'Equality is above humanity, respect it.',
         'Have faith in the balance, for it would never betray you.',
-        "Don't cheat.",
+        "Don't cheat. Exception: All tests that have marks and ratings",
         "Don't underestimate.",
         'Stick to your word.',
         'Worship the ones who worship you.',
